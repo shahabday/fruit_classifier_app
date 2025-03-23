@@ -6,6 +6,8 @@ from fastapi import FastAPI , UploadFile , File, Depends
 from torchvision.models import ResNet
 from app.model import load_model, load_transforms, LABELS
 from PIL import Image
+from torchvision.transforms import v2 as transforms
+import torch.nn.functional as F
 
 
 # we need it for Swager and FastAPI tot work correctly

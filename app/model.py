@@ -4,6 +4,10 @@ from loadotenv import load_env # removed in GCP deployment
 
 from torchvision.models import resnet18,ResNet
 from torch import nn
+from torch import nn
+from torchvision.transforms import v2 as transforms
+from pathlib import Path
+import torch
 
 
 MODELS_DIR = 'models'
