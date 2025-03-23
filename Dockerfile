@@ -1,5 +1,5 @@
 # Set Python version for the image 
-FROM Python:3.12-slim
+FROM python:3.12-slim
 
 #set the working dierctory in the container 
 WORKDIR /code
@@ -15,6 +15,12 @@ RUN pip install -r /code/requirements.txt
 COPY ./app /code/app
 
 # Set Env variables
+
+ENV WANDB_API_KEY=""
+ENV WANDB_ORG=""
+ENV WANDB_PROJECT=""
+ENV WANDB_MODEL_NAME=""
+ENV WANDB_MODEL_VERSION=""
 
 
 
