@@ -9,7 +9,7 @@ from torch import nn
 MODELS_DIR = 'models'
 MODEL_FILE_NAME = 'best_model.pth'
 
-CATEGORIES = ["freshapple", "freshbanana", "freshorange", 
+LABELS  = ["freshapple", "freshbanana", "freshorange", 
               "rottenapple", "rottenbanana", "rottenorange"]
 
 
@@ -58,7 +58,7 @@ def load_model() -> ResNet:
     model.eval()
     return model
 
-    
+
 def load_transforms() -> transforms.Compose:
     return transforms.Compose([
         transforms.Resize(256),
