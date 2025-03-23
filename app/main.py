@@ -4,6 +4,9 @@ import io
 from pydantic import BaseModel
 from fastapi import FastAPI , UploadFile , File, Depends
 from torchvision.models import ResNet
+from app.model import load_model, load_transforms, CATEGORIES
+from PIL import Image
+
 
 # we need it for Swager and FastAPI tot work correctly
 # This is a data model for the result
@@ -25,8 +28,7 @@ async def predict(
 
     input_image : UploadFile = File(...),
     model :  ResNet = Depends(load_model),
-    transforms : transforms.
-
+    transforms : transforms.Compose = Depends(load_transforms)
 
 )
 
